@@ -1,0 +1,62 @@
+package com.example.demo.pojo.model;
+
+import lombok.Data;
+
+@Data
+public class Ods_ip_adm_info {
+    private String ipadm_01;
+    private String ipadm_02;
+    private String ipadm_03;
+    private String ipadm_04;
+    private String ipadm_05;
+    private String ipadm_06;
+    private String ipadm_07;
+    private String ipadm_08;
+    private String ipadm_09;
+    private String ipadm_10;
+    private String ipadm_11;
+    private String ipadm_12;
+    private String ipadm_13;
+    private String ipadm_14;
+    private String ipadm_15;
+    private String ipadm_16;
+    private String ipadm_17;
+    private String ipadm_18;
+    private String ipadm_19;
+    private String ipadm_20;
+    private String ipadm_21;
+    private String ipadm_22;
+    private String ipadm_23;
+    private String ipadm_24;
+    private String ipadm_25;
+    private String ipadm_26;
+    private String ipadm_27;
+    private String ipadm_28;
+    private String ipadm_29;
+    private Integer ipadm_30;
+    private String ipadm_31;
+    private String ipadm_32;
+    private String ipadm_33;
+    private String ipadm_34;
+    private String ipadm_35;
+    private String ipadm_36;
+    private String ipadm_37;
+    private String ipadm_38;
+    private String ipadm_39;
+    private String ipadm_40;
+    private String ipadm_41;
+    private String ipadm_42;
+    private String ipadm_43;
+    private String ipadm_44;
+    private String ipadm_45;
+    private String ipadm_46;
+    private String ipadm_47;
+    private String ipadm_48;
+    private String ipadm_49;
+    private String ipadm_50;
+    private String ipadm_51;
+    private String ipadm_52;
+    private String ipadm_53;
+    private String ipadm_54;
+    private String ipadm_55;
+}

@@ -1,0 +1,19 @@
+server:
+  port: 8000
+spring:
+  datasource:
+    username: root
+    password: root
+    #url��databaseΪӦ�����ݿ�����
+    url: jdbc:mysql://localhost:3306/yygh_cmn?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.pojo
+
+#showSql
+logging:
+  level:
+    com.example.demo.mapper: debug
+

@@ -1,0 +1,30 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+      username: sa
+      password: kedauis_888
+      #url��databaseΪӦ�����ݿ�����
+      url: jdbc:sqlserver://192.168.21.174:1433;database=MASTER
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  redis:
+    host: 192.168.21.166
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 10000ms
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.pojo
+
+#showSql
+logging:
+  level:
+    com.example.demo.mapper: debug
