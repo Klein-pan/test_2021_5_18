@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.mysql.MysqlResultMapper">
+
+    <!--插入信息-->
+    <insert id="addResult" parameterType="java.lang.String">
+        INSERT INTO Result VALUES(#{id},#{resultCode},#{resultDesc},#{format},#{elementcount});
+    </insert>
+    <!--插入信息-->
+    <insert id="addResponse" parameterType="java.lang.String">
+        INSERT INTO Response VALUES(#{id},#{code},#{desc},#{format},#{table});
+    </insert>
+
+    <insert id="addUpTimeStart" parameterType="java.lang.String">
+        INSERT INTO uptime(`table`,`startTime`) VALUES(#{table},#{startTime});
+    </insert>
+
+    <insert id="addUpTimeEnd" parameterType="java.lang.String">
+        UPDATE uptime SET endTime=#{endTime},elementCount=#{elementcount} WHERE `table`=#{table} AND startTime = #{startTime};
+    </insert>
+</mapper>

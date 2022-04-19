@@ -21,7 +21,7 @@ public class SMUtils {
     /**
      * 默认的 sm4加密key
      */
-    public static final String DEFAULT_SM4_SECRET_KEY = "p71fpgwczpa4vlwv";
+    public static final String DEFAULT_SM4_SECRET_KEY = "zumqspv5eyqy47et";
 
     /**
      * SM2加密例子

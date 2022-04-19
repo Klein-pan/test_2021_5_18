@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.sqlserver.Ods_patient_base_infoMapper">
+
+	<!--查询信息-->
+	<select id="getInfo" resultType="com.example.demo.pojo.model.Ods_patient_base_info">
+	SELECT * FROM ODR..odr_patient_base_info  where convert(datetime2(0),#{beginTime},120) &lt;= [patientinfo_52] and [patientinfo_52] &lt;= convert (datetime2(0),#{endTime},120)
+    </select>
+</mapper>

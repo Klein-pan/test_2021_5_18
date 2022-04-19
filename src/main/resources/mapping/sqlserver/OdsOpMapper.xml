@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.sqlserver.OdsOpMaper">
+
+    <!--查询信息-->
+    <select id="getods_op_adm_info" resultType="com.example.demo.pojo.model.Ods_op_adm_info">
+     SELECT * FROM ODR..v_odr_op_adm_info
+    </select>
+
+    <!--查询信息-->
+    <select id="getods_op_account_list" resultType="com.example.demo.pojo.model.Ods_op_account_list">
+       SELECT * FROM ODR..v_odr_op_account_list
+    </select>
+    <!--查询信息-->
+    <select id="getAccountInfo" resultType="com.example.demo.pojo.model.Ods_op_account_info">
+     SELECT * FROM ODR..v_odr_op_account_info
+    </select>
+</mapper>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.sqlserver.Ods_ip_mrbase_infoMaper">
+
+    <!--查询信息-->
+    <select id="getMrbaseInfo" resultType="com.example.demo.pojo.model.Ods_ip_mrbase_info">
+SELECT * FROM ODR..v_odr_ip_mrbase_info
+
+  </select>
+    <!--根据id查询信息mrbase_127-->
+    <select id="getMrbase127byId" resultType="com.example.demo.pojo.model.Ods_ip_mrbase_info_1.Mrbase_127" parameterType="java.lang.String">
+SELECT * FROM ODR..v_odr_ip_mrbase_pathology WHERE [mrbase_01]=#{0} and [mrbase_04]=#{1}
+
+      </select>
+    <!--根据id查询信息mrbase_128-->
+    <select id="getMrbase128byId" resultType="com.example.demo.pojo.model.Ods_ip_mrbase_info_1.Mrbase_128" parameterType="java.lang.String">
+SELECT * FROM ODR..v_odr_ip_mrbase_diagnosis WHERE [mrbase_01]=#{0} and [mrbase_04]=#{1}
+
+      </select>
+    <!--根据id查询信息mrbase_129-->
+    <select id="getMrbase129byId" resultType="com.example.demo.pojo.model.Ods_ip_mrbase_info_1.Mrbase_129" parameterType="java.lang.String">
+SELECT * FROM ODR..v_odr_ip_mrbase_surgery WHERE [mrbase_01]=#{0} and [mrbase_04]=#{1}
+
+      </select>
+    <!--根据id查询信息mrbase_130-->
+    <select id="getMrbase130byId" resultType="com.example.demo.pojo.model.Ods_ip_mrbase_info_1.Mrbase_130" parameterType="java.lang.String">
+SELECT * FROM ODR..v_odr_ip_mrbase_critical_illness WHERE [mrbase_01]=#{0} and [mrbase_04]=#{1}
+
+      </select>
+
+    <!--查询getAdmInfo-->
+    <select id="getAdmInfo" resultType="com.example.demo.pojo.model.Ods_ip_adm_info" >
+SELECT * FROM ODR..v_odr_ip_adm_info  
+      </select>
+
+
+    <!--查询accountList-->
+    <select id="getAccount_list" resultType="com.example.demo.pojo.model.Ods_ip_account_list" >
+   SELECT * FROM ODR..v_odr_ip_account_list 
+      </select>
+
+    <!--查询accountInfo-->
+    <select id="getAccountInfo" resultType="com.example.demo.pojo.model.Ods_ip_account_info" >
+SELECT * FROM ODR..v_odr_ip_account_info
+      </select>
+
+
+    <!--查询PacsreportInfo-->
+    <select id="getPacsreportInfo" resultType="com.example.demo.pojo.model.Ods_adm_pacsreport_info" >
+SELECT * FROM ODR..v_odr_adm_pacsreport_info
+      </select>
+
+
+    <!--查询OperatoionInfo-->
+    <select id="getOperatoionInfo" resultType="com.example.demo.pojo.model.Ods_adm_operation_info" >
+SELECT * FROM ODR..v_odr_adm_operation_info 
+      </select>
+    <!--查询OperatoionInfo-->
+    <select id="getOperation_76" resultType="com.example.demo.pojo.model.ods_adm_operation_info.Operation_76" >
+SELECT   operation_76_1
+        ,operation_76_2
+        ,operation_76_3
+        ,operation_76_4
+        ,operation_76_5
+        ,operation_76_6
+        ,operation_76_7
+        ,operation_76_8
+        ,operation_76_9
+        ,operation_76_10
+        ,operation_76_11
+        ,operation_76_12
+        ,operation_76_13
+        ,operation_76_14
+        ,operation_76_15
+        ,operation_76_16
+        ,operation_76_17
+        ,operation_76_18
+FROM ODR..v_odr_adm_operation_info WHERE [operation_01]=#{0} and [operation_03]=#{1}
+      </select>
+</mapper>

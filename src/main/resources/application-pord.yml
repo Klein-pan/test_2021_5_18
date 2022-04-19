@@ -1,14 +1,19 @@
 server:
-  port: 8000
-
+  port: 8010
 spring:
   datasource:
+    sqlserver:
       username: sa
       password: kedauis_888
       #url��databaseΪӦ�����ݿ�����
-      url: jdbc:sqlserver://192.168.21.174:1433;database=MASTER
+      jdbc-url: jdbc:sqlserver://192.168.21.174:1433;database=MASTER
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-
+    mysql:
+      username: root
+      password: kedauis@root
+       #url��databaseΪӦ�����ݿ�����
+      jdbc-url: jdbc:mysql://192.168.21.177:3306/tongyongUD?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+      driver-class-name: com.mysql.jdbc.Driver
   redis:
     host: 192.168.21.166
     port: 6379
@@ -20,6 +25,8 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 10000ms
+  main:
+    allow-bean-definition-overriding: true # 意思是后来发现的bean会覆盖之前相同名称的bean
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.example.demo.pojo
@@ -28,3 +35,10 @@ mybatis:
 logging:
   level:
     com.example.demo.mapper: debug
+
+#医院id密钥
+client:
+  prod:
+    ClientId: JWB_lxdnsw_373459
+    ClientSecret: t270279bf8
+    key: hrj421g7w5a56590

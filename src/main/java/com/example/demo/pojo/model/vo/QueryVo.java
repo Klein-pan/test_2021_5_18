@@ -8,6 +8,7 @@ import java.util.Date;
 @Data
 public class QueryVo {
     private Respense response;
-    private Date date;
+    private String date;
     private int elementCount;
+    private String result;
 }
